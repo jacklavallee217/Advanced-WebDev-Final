@@ -1,6 +1,12 @@
+table {
+	border-left: 3px solid #C60C30;
+	border-right: 3px solid #C60C30;
+	border-radius: 10px;
+}
+
 .player_stats {
-	padding: 1.5em;
-	margin: 0 auto;
+	padding: .5em;
+	margin: 3em auto;
 }
 
 .index_stats {
@@ -12,20 +18,16 @@
 	padding: 0em 1.5em;
 }
 
-.swi_stats {
-	padding: 1.5em 1.5em 0 1.5em;
-}
-
-#swi_stat {
-	border-top: 2px solid #002244;
-}
-
-td {
+td, th {
 	margin: 0 2em;
 	padding: 10px 5px 0 20px;
 	font-size: 2em;
 	font-family: 'Quicksand', sans-serif;
 	color: #002244;
+}
+
+th {
+	font-weight: 800;
 }
 
 .index_stat {

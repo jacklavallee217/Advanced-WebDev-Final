@@ -18,7 +18,19 @@
 					<h1>Outfielders</h1>
 				</div>
 
-				<div id="betts">
+				<?php
+					include "includes/config.php";
+					include "includes/connect.php";
+
+					$category = "outfielders";
+					$cols = " HR, RBI, R, SB, AVG, OBP, OPS ";
+					$table = "hittingstats";
+
+					include "player_info.php";
+
+				?>
+
+				<!--<div id="betts">
 					<img id="betts_profile" class="outfielders_profile" src="img/betts_profile.jpg" width="400" height="225">
 					<h2 id="player_title">Mookie Betts</h2>
 				</div>
@@ -141,7 +153,7 @@
 				<form id="favForm" action="" method="post">
 					<input type="submit" value="Favorite Player" class="button" id="favPlayer" name="submit"/>
 					<input type="hidden" value="jNumber" name="jNumber"/>
- 				</form>
+ 				</form>-->
 
 
 				<div id="position_links">

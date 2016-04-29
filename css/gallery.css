@@ -101,7 +101,7 @@ em {
 }
 
 
-			/*	Prospect Page */
+			/*	Prospect Nav Page */
 
 
 #prospect_padding {
@@ -203,9 +203,12 @@ em {
 }
 
 .player_profile {
-	padding-top: 2em;
+	margin-top: 2em;
 	border-top: 2px solid #C60C30;
+	border-right: 2px solid #C60C30;
 	border-bottom: 2px solid #002244;
+	border-left: 2px solid #002244;
+	border-radius: 50%;
 }
 
 legend {
@@ -224,56 +227,4 @@ legend {
 .index_legend {
 	padding: 1em 0;
 	font-size: 1.5em;
-}
-
-				/*	Catcher Page */
-
-#swihart {
-	padding-top: 2em;
-	border-bottom: 2px solid #002244;
-}
-
-.catcher_profile {
-	margin: 0 auto;
-	border: 2px solid #002244;
-	border-radius: 50%;
-}
-
-				/*	Infielder Page */
-
-#travis {
-	padding-top: 2em;
-	border-bottom: 2px solid #002244;
-}
-
-.infielders_profile {
-	margin: 0 auto;
-	border: 2px solid #002244;
-	border-radius: 50%;
-}
-
-				/*	Outfielder Page */
-
-#betts {
-	padding-top: 2em;
-	border-bottom: 2px solid #002244;
-}
-
-.outfielders_profile {
-	margin: 0 auto;
-	border: 2px solid #002244;
-	border-radius: 50%;
-}
-
-				/*	Pitcher Page */
-
-#rodriguez {
-	padding-top: 2em;
-	border-bottom: 2px solid #002244;
-}
-
-.pitcher_profile {
-	margin: 0 auto;
-	border: 2px solid #002244;
-	border-radius: 50%;
 }

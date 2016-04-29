@@ -12,21 +12,6 @@ form {
 	margin: -4em 0 0 0;
 }
 
-#favForm {
-	margin: 0;
-}
-
-
-input[type="text"], input[type="email"], input[type="password"] {
-	width: 60%;
-	max-width: 60%;
-	height: 3px;
-	border: 2px solid #002244;
-	border-radius: 5px;
-	padding: 1em;
-	margin: .5em 0 2em 0;
-}
-
 textarea {
 	width: 100%;
 	max-width: 100%;
@@ -90,4 +75,23 @@ blockquote {
 
 blockquote a {
 	color: #C60C30;
+}
+
+
+/* Favorite Buttons */
+
+.favForm {
+	margin-bottom: 2em;
+	border-bottom: 2px solid #002244;
+}
+
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 60%;
+	max-width: 60%;
+	height: 3px;
+	border: 2px solid #002244;
+	border-radius: 5px;
+	padding: 1em;
+	margin: .5em 0 2em 0;
 }

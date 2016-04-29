@@ -18,7 +18,19 @@
 					<h1>Pitchers</h1>
 				</div>
 
-				<div id="rodriguez">
+				<?php
+					include "includes/config.php";
+					include "includes/connect.php";
+
+					$category = "pitchers";
+					$cols = " W, L, ERA, IP, SO, BB, WHIP ";
+					$table = "pitchingstats";
+
+					include "player_info.php";
+
+				?>
+
+				<!--<div id="rodriguez">
 					<img id="rodriguez_profile" class="pitcher_profile" src="img/rodriguez_profile.jpg" width="400" height="225">
 					<h2 id="player_title">Eduardo Rodriguez</h2>
 				</div>
@@ -225,7 +237,7 @@
 				<form id="favForm" action="" method="post">
 					<input type="submit" value="Favorite Player" class="button" id="favPlayer" name="submit"/>
 					<input type="hidden" value="jNumber" name="jNumber"/>
- 				</form>
+ 				</form>-->
 
 
 				<div id="position_links">

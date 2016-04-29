@@ -18,7 +18,19 @@
 					<h1>Infielders</h1>
 				</div>
 
-				<div id="travis">
+				<?php
+					include "includes/config.php";
+					include "includes/connect.php";
+
+					$category = "infielders";
+					$cols = " HR, RBI, R, SB, AVG, OBP, OPS ";
+					$table = "hittingstats";
+					
+					include "player_info.php";
+
+				?>
+
+				<!--<div id="travis">
 					<img id="travis_profile" class="infielders_profile" src="img/travis_profile.jpg" width="400" height="225">
 					<h2 id="player_title">Sam Travis</h2>
 				</div>
@@ -213,7 +225,7 @@
 				<form id="favForm" action="" method="post">
 					<input type="submit" value="Favorite Player" class="button" id="favPlayer" name="submit"/>
 					<input type="hidden" value="jNumber" name="jNumber"/>
- 				</form>
+ 				</form>-->
 
 
 				<div id="position_links">
