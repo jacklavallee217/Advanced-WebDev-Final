@@ -1,0 +1,35 @@
+.player_stats {
+	padding: 1.5em;
+	margin: 0 auto;
+}
+
+.index_stats {
+	padding: 1em;
+	margin: 0 auto;
+}
+
+.stat_cats {
+	padding: 0em 1.5em;
+}
+
+.swi_stats {
+	padding: 1.5em 1.5em 0 1.5em;
+}
+
+#swi_stat {
+	border-top: 2px solid #002244;
+}
+
+td {
+	margin: 0 2em;
+	padding: 10px 5px 0 20px;
+	font-size: 2em;
+	font-family: 'Quicksand', sans-serif;
+	color: #002244;
+}
+
+.index_stat {
+	margin: 0 1em;
+	padding: 5px 2.5px 0 10px;
+	font-size: 1.2em;
+}

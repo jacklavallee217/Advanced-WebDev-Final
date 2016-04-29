@@ -1,0 +1,393 @@
+/*
+*** Colors ***
+
+Red: #C60C30
+Navy: #002244
+
+*/
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+
+/*	Header	*/
+
+
+header {
+	padding: 3em 0;
+	border-bottom: 3px solid #C60C30;
+	position: relative;
+	top: -3em;
+}
+
+nav {
+	position: relative;
+}
+
+header nav h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 2.5em;
+	margin-left: 2.5rem;
+	background-color: #FFFFFF;
+	padding: .75rem 1rem .75rem 1rem;
+	border: 2px solid #C60C30;
+	display: inline-block;
+}
+
+header nav h1 a {
+	color: #C60C30;
+	text-decoration: none;
+}
+
+/*	Header > Nav  */
+
+#sign_in {
+	background-color: #002244;
+	height: 50px;
+	border-bottom: 3px solid #C60C30;
+}
+
+#sign_in  h3{
+	margin: auto 0;
+	padding: 12px 0 12px 12px;
+	font-family: 'Quicksand', sans-serif;
+	width: 15%;
+	vertical-align: center;
+	display: inline-block;
+	float: right;
+	margin: 0 1em;
+	white-space: nowrap;
+}
+
+#sign_in h3 a{
+	height: 30px;
+	margin: 0px 12px 5px 12px;
+	text-decoration: none;
+	color: #ffffff;
+	border-top: solid 2px #ffffff;
+	border-right: solid 2px #ffffff;
+	border-left: solid 2px #ffffff;
+	border-radius: 5px;
+	padding: 8px 8px 2px 8px;
+	display: inline-block;
+}
+
+#sign_in h3 a:hover {
+	background-color: #C60C30;
+}
+
+#sign_in_links {
+	float: right;
+	margin-right: 40px;
+	width: 40%;
+}
+
+#nav_links {
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+}
+
+#nav_links #nav_link {
+	list-style-type: none;
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	padding: 0 1rem 0 1rem;
+	border-left: 1px solid #C60C30;
+	color: #C60C30;
+	text-decoration: none;
+	font-size: 2em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	display: inline-block;
+}
+
+nav ul li:hover {
+	background-color: #C60C30;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+nav ul li:hover a {
+	color: white;
+}
+
+#active{
+	color: white;
+	background-color: #002244;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+/*	Header > Nav - Dropdown Nav */
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul ul {
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 188.875px;
+	height: 160px;
+	display: none;
+	position: absolute;
+	background-color: #C60C30;
+	border: 1px solid #C60C30;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	z-index: 2;
+}
+
+nav ul ul li {
+	display: block;
+	z-index: 2;
+}
+
+nav ul ul li a {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0em;
+	font-size: 2em;
+	float: left;
+	color: white;
+	width: 100%;
+}
+
+nav ul ul li a:hover {
+	background-color: #002244;
+	border: 1px solid #002244;
+	border-radius: 5px;
+}
+
+
+/*	Body	*/
+
+body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.skinny_wrapper {
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.wrapper  p {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.2em;
+	width: 95%;
+	margin: 1.5em auto;
+}
+
+.wrapper_padding {
+	padding: 3em 0;
+}
+
+#homepage_content {
+  background-color: rgba(215, 40, 40, 1);
+	display: block;
+  margin: 0 auto;
+}
+
+#homepage_content h1 {
+  background-color: rgba(215, 40, 40, .2);
+	color: #ffffff;
+	font-size: 500%;
+	font-family: 'Lobster', cursive;
+	padding: 0 2rem 0 2rem;
+  margin: 0 0 0 1rem;
+  z-index: 1;
+}
+
+#homepage_content p {
+  color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 120%;
+  font-weight: 800;
+	width: 80%;
+	margin: 2em auto 0 auto;
+	text-align: left;
+	text-indent: 1.5em;
+  z-index: 1;
+}
+
+#inner_content {
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	width: 100%;
+	height: 600px;
+	margin: 0 10px;
+	align-content: center;
+}
+
+#inner_content p {
+	font-size: 200%;
+	margin: 2em 5px 0 5px;
+}
+
+#inner_content p, #player_card {
+	flex: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#player_card {
+	z-index: 1;
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	background-color: rgba(255, 255, 255, 0.7);;
+	margin: 2em 5px 0 5px;
+	border: 2px solid #002244;
+	border-radius: 5px;
+	align-content: center;
+	width: 70%;
+	height: 500px;
+}
+
+#fav_profile {
+	margin: 1em auto;
+	border: 2px solid #002244;
+	border-radius: 50%;
+	display: block;
+}
+
+#player_card h2 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#fav_title {
+	width: 100%;
+	text-align: center;
+	background-color: #002244;
+	margin: 0;
+	top: 0;
+}
+
+#slide {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+	-ms-filter: blur(5px);
+  filter: blur(5px);
+  z-index: 0;
+  opacity: 0.8;
+	width: 100%;
+	height: 90%;
+}
+
+.col-1 h2 {
+	color: #C60C30;
+	font-size: 2em;
+	font-family: 'Lobster', cursive;
+	padding: 0 0 0 2rem;
+}
+
+.col-1 p {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.2em;
+	width: 95%;
+	margin: 1.5em auto;
+}
+
+b {
+	font-size: 1.6em;
+	color: #C60C30;
+}
+
+#logQuote {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.page_title {
+	text-align: center;
+	border-bottom: 1px solid #C60C30;
+	color: #C60C30;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	width: 80%;
+	margin: 0 auto;
+	padding: 2rem 0;
+}
+
+.log_in_title {
+	padding: 1.2rem 0;
+}
+
+.sign_up_title {
+	padding: 1.2rem 0;
+}
+
+
+.page_title blockquote {
+	font-size: 1rem;
+}
+
+.prospect_links {
+	padding-top: 3em;
+}
+
+/*	Footer	*/
+
+
+footer {
+	font-family: 'Quicksand', sans-serif;
+	border-top: 3px solid #C60C30;
+	padding: 1.8rem 1rem;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	background-color: #002244;
+}
+
+.copyright {
+	float: left;
+	color: #ffffff;
+	margin: auto 0 auto 1rem;
+	font-size: 1.5rem;
+}
+
+footer a i {
+	transition: all .25s linear;
+	color: #ffffff;
+	float: right;
+	padding: 0 1rem 1.25rem 1rem;
+	margin-right: 2rem;
+}
+
+footer a i:hover {
+	color: #C60C30;
+}
+
+#visitor {
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+}

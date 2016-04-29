@@ -1,0 +1,279 @@
+				/*	Index Page	*/
+
+#banner {
+	border: 4px #C60C30 solid;
+	border-radius: 12px;
+}
+
+
+
+			/*	Recap Page */
+
+
+img {
+	vertical-align: middle;
+}
+
+#recap {
+	position: relative;
+	margin-top: 3em 0;
+}
+
+#recap p {
+	padding: 1em 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.2em;
+	text-align: left;
+	text-indent: 1.5em;
+}
+
+#recap1 {
+	width: 232px;
+	border: 2px solid #C60C30;
+	padding: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+#recap2 {
+	width: 342.47px;
+	border: 2px solid #002244;
+	padding: 5px;
+	border-radius: 5px;
+	float: right;
+}
+
+#recap3 {
+	width: 206.565px;
+	border: 2px solid #C60C30;
+	padding: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+#recap4 {
+	width: 337px;
+	border: 2px solid #002244;
+	padding: 5px;
+	border-radius: 5px;
+	float: right;
+}
+
+#recap5 {
+	width: 355.555px;
+	border: 2px solid #C60C30;
+	padding: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+em {
+	display: block;
+	font-family: 'Quicksand', sans-serif;
+	color: #002244;
+	padding: 5px;
+}
+
+
+#ram_sand {
+	/*	0.74625	*/
+	border-bottom: 2px solid #C60C30;
+}
+
+#betts_bog {
+	/*	1.71235	*/
+	border-bottom: 2px solid #002244;
+}
+
+#holt {
+	/*	0.68855	*/
+	border-bottom: 2px solid #C60C30;
+}
+
+#brad {
+	/*	1.49979	*/
+	border-bottom: 2px solid #002244;
+}
+
+#domb {
+	/*	1.77778	*/
+	border-bottom: 2px solid #C60C30;
+}
+
+
+			/*	Prospect Page */
+
+
+#prospect_padding {
+	padding: 3em;
+}
+
+.prospect_images {
+	/*	1.77778	*/
+	vertical-align: middle;
+	height: 360px;
+    width: 640px;
+    z-index: 1;
+    border-radius: 50%;
+    border: 6px solid #000000;
+	transition: all 1s linear;
+	-webkit-filter: blur(5px);
+  	-moz-filter: blur(5px);
+  	-o-filter: blur(5px);
+  	-ms-filter: blur(5px);
+  	filter: blur(5px);
+}
+
+#prospect_links:hover .navy {
+  	transition: all .5s linear;
+  	-webkit-filter: blur(0px);
+  	-moz-filter: blur(0px);
+  	-o-filter: blur(0px);
+  	-ms-filter: blur(0px);
+  	filter: blur(0px);
+  	border: 6px solid #002244;
+  	border-radius: 5px;
+}
+
+#prospect_links:hover .red {
+  	transition: all .5s linear;
+  	-webkit-filter: blur(0px);
+  	-moz-filter: blur(0px);
+  	-o-filter: blur(0px);
+  	-ms-filter: blur(0px);
+  	filter: blur(0px);
+  	border: 6px solid #C60C30;
+  	border-radius: 5px;
+}
+
+#prospect_links {
+	height: 360px;
+	width: 640px;
+	margin: 0 auto;
+}
+
+#prospect_links a {
+	text-decoration: none;
+}
+
+#prospect_links a h1 {
+	transition: all .5s linear;
+	z-index: 2;
+  	bottom: 240px;
+  	position: relative;
+  	margin: 0 auto;
+  	padding: 0;
+  	width: 60%;
+  	font-family: 'Quicksand', sans-serif;
+  	text-decoration: none;
+	font-size: 4em;
+	color: #ffffff;
+	visibility: hidden;
+	border-radius: 10px;
+}
+
+#prospect_links:hover #navy {
+	-webkit-transition-delay: .25s;
+    transition-delay: .25s;
+    background-color: #002244;
+    opacity: 50%;
+	visibility: visible;
+}
+
+#prospect_links:hover #red {
+	-webkit-transition-delay: .25s;
+    transition-delay: .25s;
+    background-color: #C60C30;
+    opacity: 50%;
+	visibility: visible;
+}
+
+				/*	Prospect Pages */
+
+#player_title {
+	font-family: 'Quicksand', sans-serif;
+	color: #002244;
+	font-size: 2em;
+}
+
+#player_summary {
+	font-family: 'Quicksand', sans-serif;
+	color: #002244;
+	font-size: 2em;
+}
+
+.player_profile {
+	padding-top: 2em;
+	border-top: 2px solid #C60C30;
+	border-bottom: 2px solid #002244;
+}
+
+legend {
+	text-align: center;
+	border-bottom: 1px solid #002244;
+	color: #002244;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	width: 80%;
+	margin: 0 auto;
+	padding: 2rem 0;
+	font-weight: 300;
+}
+
+.index_legend {
+	padding: 1em 0;
+	font-size: 1.5em;
+}
+
+				/*	Catcher Page */
+
+#swihart {
+	padding-top: 2em;
+	border-bottom: 2px solid #002244;
+}
+
+.catcher_profile {
+	margin: 0 auto;
+	border: 2px solid #002244;
+	border-radius: 50%;
+}
+
+				/*	Infielder Page */
+
+#travis {
+	padding-top: 2em;
+	border-bottom: 2px solid #002244;
+}
+
+.infielders_profile {
+	margin: 0 auto;
+	border: 2px solid #002244;
+	border-radius: 50%;
+}
+
+				/*	Outfielder Page */
+
+#betts {
+	padding-top: 2em;
+	border-bottom: 2px solid #002244;
+}
+
+.outfielders_profile {
+	margin: 0 auto;
+	border: 2px solid #002244;
+	border-radius: 50%;
+}
+
+				/*	Pitcher Page */
+
+#rodriguez {
+	padding-top: 2em;
+	border-bottom: 2px solid #002244;
+}
+
+.pitcher_profile {
+	margin: 0 auto;
+	border: 2px solid #002244;
+	border-radius: 50%;
+}

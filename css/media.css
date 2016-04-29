@@ -1,0 +1,198 @@
+@media (max-width: 1187px) {
+
+	#slide {
+		linear-gradient(
+      rgba(215, 40, 40, 1),
+      rgba(0, 34, 68, 1)
+    )
+	}
+
+	#homepage_content {
+		background-color: rgba(215, 40, 40, 1);
+		background-size: cover;
+		height: 800px;
+	}
+
+	#homepage_content h1 {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	#homepage_content p {
+		text-align: center;
+		font-size: 125%;
+	}
+
+}
+
+
+
+@media (max-width: 887px) {
+
+  header nav h1 {
+  	font-size: 3em;
+  	margin: 0 auto;
+  	text-align: center;
+  	display: block;
+  	width: 200px;
+  	border: none;
+  	text-decoration: underline;
+  	padding-bottom: 3.25em;
+  }
+
+  header nav h1 a {
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		width: 100%;
+  }
+
+	#homepage_content p {
+		width: 100%;
+	}
+
+  #nav_links {
+  	margin: 0 auto;
+  	width: 100%;
+  	bottom: -50px;
+  	padding-bottom: 2em;
+  }
+
+  nav ul li {
+  	width: 100%;
+  	margin: 0 auto;
+  	padding-bottom: .5em;
+  	text-align: center;
+  	display: block;
+  }
+
+  nav ul li a {
+  	width: 100%;
+	padding: 0 .5rem;
+	margin: 0 auto;
+	text-align: center;
+	border: none;
+  }
+
+  nav ul ul {
+  	display: none;
+  	width: 0;
+  	height: 0;
+  	padding: 0;
+  }
+
+  nav ul ul li {
+	display: none;
+}
+
+  nav ul ul li a {
+  	display: none;
+  }
+
+/*	Prospects Page */
+
+  #prospect_links {
+	height: 250px;
+	width: 444.445px;
+  }
+
+  .prospect_images {
+  	height: 250px;
+	width: 444.445px;
+  }
+
+  #prospect_links a h1 {
+  	bottom: 150px;
+  	width: 60%;
+		font-size: 2.5em;
+  }
+
+}
+
+@media (max-width: 760px) {
+	#slide {
+	  -webkit-filter: blur(5px);
+	  -moz-filter: blur(5px);
+	  -o-filter: blur(5px);
+		-ms-filter: blur(5px);
+	  filter: blur(5px);
+	  z-index: 0;
+	  opacity: 0.8;
+		width: 100%;
+		height: 75%;
+	}
+}
+
+
+@media (max-width: 732px) {
+	#banner {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 670px) {
+	#counter {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+
+  i {
+		visibility: hidden;
+		display: none;
+  }
+
+  .copyright {
+		float: center;
+		text-align: center;
+		margin: 0 auto;
+  }
+
+  #prospect_links {
+	height: 175px;
+	width: 311.115px;
+  }
+
+  .prospect_images {
+  	height: 175px;
+	width: 311.115px;
+  }
+
+  #prospect_links a h1 {
+  	bottom: 110px;
+  	width: 60%;
+		font-size: 2em;
+  }
+
+	#homepage_content p {
+		font-size: 100%;
+	}
+
+}
+
+@media (max-width: 448px) {
+
+  #prospect_links {
+		height: 140px;
+		width: 248.892px;
+  }
+
+  .prospect_images {
+  	height: 140px;
+		width: 248.892px;
+  }
+
+  #prospect_links a h1 {
+  	bottom: 90px;
+  	width: 60%;
+		font-size: 1.25em;
+  }
+
+	#homepage_content h1 {
+		font-size: 450%;
+	}
+
+}
