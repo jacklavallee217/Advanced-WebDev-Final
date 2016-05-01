@@ -79,37 +79,71 @@
 									Red Sox, their prospect's are on the rise. SoxCrops is going to
 									try and give you a first hand look into those prospects future.</p>
 
-									<div id="player_card">
-											<h3 id="fav_title">Favorite Player</h3>
-											<img id="fav_profile" src="img/swihart_profile.jpg" width="400" height="225">
-											<h2 id="player_title">Blake Swihart</h2>
+									<?php
+										session_start();
 
-											<legend class="index_legend">2015 Statistics</legend>
+										if(isset($_SESSION['favorite'])) {
+											$jNumber = $_SESSION['favorite'];
+										}
 
-											<table class="player_stats index_stats" id="swihart_stats">
-											  <tbody>
-												<tr class="stat_cats">
-													<td class="index_stat">HR</td>
-													<td class="index_stat">RBI</td>
-													<td class="index_stat">R</td>
-													<td class="index_stat">SB</td>
-													<td class="index_stat">AVG</td>
-													<td class="index_stat">OBP</td>
-													<td class="index_stat">OPS</td>
-												</tr>
-												<tr class="swi_stats" id="prospect_stats">
-													<td id="swi_stat" class="stat index_stat">5</td>
-													<td id="swi_stat" class="stat index_stat">31</td>
-													<td id="swi_stat" class="stat index_stat">47</td>
-													<td id="swi_stat" class="stat index_stat">4</td>
-													<td id="swi_stat" class="stat index_stat">.274</td>
-													<td id="swi_stat" class="stat index_stat">.319</td>
-													<td id="swi_stat" class="stat index_stat">.712</td>
-												</tr>
-											  </tbody>
-											</table>
+										else {
 
-									</div>
+											$query = "SELECT * FROM player WHERE jNumber = '$jNumber'";
+										  $result = mysqli_query($db, $query);
+
+										  if (!$result) {
+										    die ("SELECT error:" . mysqli_error($db));
+										  }
+
+											$numrows = mysqli_num_rows($result);
+
+											for($i = 0; $i < $numrows; $i++) {
+										    $row = mysqli_fetch_assoc($result);
+
+												$jNumber = $row['jNumber'];
+												$fname = $row['fName'];
+									      $lname = $row['lName'];
+									      $name = "$fname $lname";
+												$image = $row['image'];
+
+
+										print	"<div id='player_card'>";
+											print	"<h3 id='fav_title'>Favorite Player</h3>";
+													print "<img id='fav_profile' src='$image' width='400' height='225'>";
+													print "<h2 id='player_title'>$name</h2>";
+
+													$query2 = "select $cols from $table where jNumber = '$jNumber'";
+													$result2 = mysqli_query($db, $query2);
+
+										      if (!$result2) {
+										        die ("SELECT error:" . mysqli_error($db));
+										      }
+
+										      $numrows2 = mysqli_num_rows($result2);
+
+													print "<legend class='index_legend'>2015 Statistics</legend>";
+
+													for($j = 0; $j < $numrows2; $j++) {
+										        $row2 = mysqli_fetch_assoc($result2);
+
+													print "<table class='player_stats index_stats'>";
+													  print	"<tbody>";
+															print "<tr class='stat_cats'>";
+															foreach($row2 as $key => $value) {
+																	print "<th>$key</th>";
+																}
+																print "</tr>";
+																print "<tr class='stat_cats'>";
+																foreach($row2 as $key => $value) {
+																print "<td>$value</td>";
+															}
+															print "</tr>";
+														print "</tbody>";
+													print "</table>";
+											print "</div>";
+
+										}
+									?>
 
 								</div>
 
