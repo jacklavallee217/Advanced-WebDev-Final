@@ -1,10 +1,10 @@
 <?php
+session_start();
 
 if (isset ($_POST ['favorite'])) {
   $_SESSION['favorite'] = $_POST['jNumber'];
 }
 
-else {
 
   $query = "SELECT * FROM player WHERE category = '$category'";
   $result = mysqli_query($db, $query);
@@ -27,7 +27,7 @@ else {
       $lname = $row['lName'];
       $name = "$fname $lname";
 
-      print "<h2 id='player_title'>$name</h2>";
+      print "<h2 id='player_title'>$name: #$jNumber</h2>";
 
       print "</div>";
 
@@ -65,9 +65,9 @@ else {
 
           print "<form class='favForm' action='' method='post'>";
           print "<input type='submit' value='Favorite Player' class='button' id='favPlayer' name='favorite'/>";
-          print "<input type='hidden' value='jNumber' name='$jNumber'/>";
+          print "<input type='hidden' value='$jNumber' name='jNumber'/>";
           print "</form>";
 
     }
-}
+
 ?>

@@ -2,7 +2,11 @@
 <html>
 
 		<head>
-			<?php include "styling.php"; ?>
+			<?php
+			session_start();
+			$jNumber = $_SESSION['favorite'];
+			include "styling.php";
+			?>
 
 			<script type="text/javascript">
 
@@ -27,11 +31,15 @@
     <body>
 				<header>
 					<nav>
-						<?php include "header.php"; ?>
+						<?php
+						include "header.php";
+						require("includes/config.php");
+						require("includes/connect.php");
+						?>
 					</nav>
 				</header>
 
-			<?php
+			<!--<?php
 				/*$Img1 = "https://i.ytimg.com/vi/Hq7pjZSuj6s/maxresdefault.jpg";
 				$Url1 = "http://www.redsox.com";
 
@@ -66,7 +74,7 @@
 							<img id='fenway_background' src= $img border=0>
 						</a>
 				   </div>";*/
-					?>
+					?>-->
 
             <div id="homepage_content">
                 <h1>Welcome to SoxCrops!</h1>
@@ -80,9 +88,11 @@
 									try and give you a first hand look into those prospects future.</p>
 
 									<?php
-										session_start();
 
-										if(isset($_SESSION['favorite'])) {
+
+										/*$jNumber = $row['jNumber'];*/
+
+										if(isset($_POST['favorite'])) {
 											$jNumber = $_SESSION['favorite'];
 										}
 
@@ -100,19 +110,29 @@
 											for($i = 0; $i < $numrows; $i++) {
 										    $row = mysqli_fetch_assoc($result);
 
-												$jNumber = $row['jNumber'];
 												$fname = $row['fName'];
 									      $lname = $row['lName'];
 									      $name = "$fname $lname";
 												$image = $row['image'];
 
 
-										print	"<div id='player_card'>";
+											print "<div id='fav_hidden'>";
 											print	"<h3 id='fav_title'>Favorite Player</h3>";
-													print "<img id='fav_profile' src='$image' width='400' height='225'>";
-													print "<h2 id='player_title'>$name</h2>";
 
-													$query2 = "select $cols from $table where jNumber = '$jNumber'";
+												print	"<div id='player_card'>";
+													print "<div id='card_profile'>";
+														print "<h2 id='player_title'>$name</h2>";
+														print "<img id='fav_profile' src='$image' width='400' height='225'>";
+													print "</div>";
+
+													if ($row['category'] == 'Pitchers') {
+															$query2 = "select W, L, ERA, IP, SO, BB, WHIP from pitchingstats
+															           where jNumber = '$jNumber'";
+													}
+													else {
+														 $query2 = "select HR, RBI, R, SB, AVG, OBP, OPS from hittingstats
+														           where jNumber = '$jNumber'";
+													}
 													$result2 = mysqli_query($db, $query2);
 
 										      if (!$result2) {
@@ -121,9 +141,11 @@
 
 										      $numrows2 = mysqli_num_rows($result2);
 
-													print "<legend class='index_legend'>2015 Statistics</legend>";
 
 													for($j = 0; $j < $numrows2; $j++) {
+
+														print "<div id='card_stats'>";
+														print "<legend class='index_legend'>2015 Statistics</legend>";
 										        $row2 = mysqli_fetch_assoc($result2);
 
 													print "<table class='player_stats index_stats'>";
@@ -141,8 +163,12 @@
 														print "</tbody>";
 													print "</table>";
 											print "</div>";
+										print "</div>";
+									print "</div>";
 
 										}
+									}
+								}
 									?>
 
 								</div>
@@ -153,19 +179,19 @@
 									var step = 0
 
 									function slideIt() {
-										if (!document.images) {
-											return document.getElementByID('slide').src = slideImages[step].src
-											if (step < 6) {
+										if (!document.images)
+											return
+										document.getElementById('slide').src = slideImages[step].src
+											if (step < 5)
 												step++
-											}
-											else {
+											else
 												step = 0
-												setTimeout("slideIt()", 5000)
-											}
-										}
+
+											setTimeout("slideIt()", 10000)
+
 									}
 
-									slideIt();
+									slideIt()
 								</script>
             </div>
 
